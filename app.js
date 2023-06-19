@@ -5,7 +5,7 @@ const input = document.getElementById('add_bar');
 searchBarList.addEventListener('click', function (e) {
     if (e.target.classList.contains('delete')) {
         const li = e.target.parentNode;
-        const line = e.target.parentNode;
+        const line = li.nextElementSibling;
         searchBarList.removeChild(li);
         searchBarList.removeChild(line);
     }
