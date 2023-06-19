@@ -1,0 +1,237 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
+:root {
+  --pink: #de3f53;
+  --search-and-add-new-task: #3c4979;
+  --tasks: #262e4c;
+  --bin: #e0e0e0;
+  --background: #e1e3ea;
+  --text-color: #ffffff;
+  --green: #1dd2af;
+  --gray: #B0B0B0;
+  --font-accent: "Open Sans", sans-serif;
+  --font-weight: 500;
+}
+
+body {
+  background-color: var(--background);
+  font-family: var(--font-accent);
+  font-weight: var(--font-weight);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  place-content: center;
+  margin: auto;
+}
+
+.product {
+  width: 90%;
+  max-width: 1440px;
+  height: 70%;
+}
+
+.header {
+  background-color: var(--pink);
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 26px;
+  padding: 0.75rem 0;
+}
+
+.header input {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  display: block;
+  padding: 8px;
+  border: 1px solid var(--tasks);
+  font-size: 18px;
+}
+
+.header form {
+  padding-bottom: 0.75rem;
+}
+
+#task_list {
+  background-color: var(--tasks);
+}
+
+.search__class {
+  background-color: var(--pink);
+  filter: brightness(199%);
+  color: var(--text-color);
+  font-size: 22px;
+  text-indent: 15px;
+  border: none;
+}
+
+#add__task {
+  display: flex;
+}
+
+.add-bar {
+  width: calc(100% - 45px);
+  min-height: 45px;
+  background-color: var(--search-and-add-new-task);
+  border: none;
+  text-indent: 15px;
+  font-size: 22px;
+  color: var(--text-color);
+}
+
+.add {
+  cursor: pointer;
+  min-width: 45px;
+  min-height: 45px;
+  font-size: 32px;
+  color: white;
+  background-color: var(--green);
+}
+
+.footer {
+  background-color: var(--pink);
+  height: 36px;
+}
+
+.delete {
+  display: flex;
+  justify-content: center;
+  max-width: 46px;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: auto;
+  fill: var(--text-color);
+}
+
+li {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+li input[type=radio]:checked + span {
+  text-decoration: line-through;
+  color: var(--gray);
+}
+
+.name {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  border: 0.5px solid var(--gray);
+  width: 95%;
+}
+
+.radioBtn {
+  margin: auto 25px;
+}
+
+@media only screen and (min-width: 40em) {
+  .title {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .title {
+    font-size: 42px;
+  }
+}/*# sourceMappingURL=style.css.map */

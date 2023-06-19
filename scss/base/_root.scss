@@ -1,0 +1,159 @@
+:root {
+    --pink: #de3f53;
+    --search-and-add-new-task: #3c4979;
+    --tasks: #262e4c;
+    --bin: #e0e0e0;
+    --background: #e1e3ea;
+    --text-color: #ffffff;
+    --green: #1dd2af;
+    --gray: #B0B0B0;
+
+    --font-accent: 'Open Sans', sans-serif;
+    --font-weight: 500;
+}
+
+@mixin mp($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+body {
+    background-color: var(--background);
+    font-family: var(--font-accent);
+    font-weight: var(--font-weight);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    place-content: center;
+    margin: auto;
+}
+
+.product {
+    width: 90%;
+    max-width: 1440px;
+    height: 70%;
+
+}
+
+.header {
+    background-color: var(--pink);
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 26px;
+    padding: 0.75rem 0;
+}
+
+.header input {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+    padding: 8px;
+    border: 1px solid var(--tasks);
+    font-size: 18px;
+}
+
+.header form {
+    padding-bottom: 0.75rem;
+}
+
+#task_list {
+    background-color: var(--tasks);
+}
+
+.search__class {
+    background-color: var(--pink);
+    filter: brightness(199%);
+    color: var(--text-color);
+    font-size: 22px;
+    text-indent: 15px;
+    border: none;
+}
+
+#add__task {
+    display: flex;
+}
+
+.add-bar {
+    width: calc(100% - 45px);
+    min-height: 45px;
+    background-color: var(--search-and-add-new-task);
+    border: none;
+    text-indent: 15px;
+    font-size: 22px;
+    color: var(--text-color);
+}
+
+
+.add {
+    cursor: pointer;
+    min-width: 45px;
+    min-height: 45px;
+    font-size: 32px;
+    color: white;
+    background-color: var(--green);
+}
+
+.footer {
+    background-color: var(--pink);
+    height: 36px;
+}
+
+.delete {
+    display: flex;
+    justify-content: center;
+    max-width: 46px;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto;
+    fill: var(--text-color);
+}
+
+li {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    input[type=radio]:checked+span {
+        text-decoration: line-through;
+        color: var(--gray);
+    }
+
+}
+
+.name {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    border: 0.5px solid var(--gray);
+    width: 95%;
+}
+
+.radioBtn {
+    margin: auto 25px;
+}
+
+
+@include mp(40em) {
+    .title {
+        font-size: 32px;
+    }
+}
+
+@include mp(1440px) {
+    .title {
+        font-size: 42px;
+    }
+}
